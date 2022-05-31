@@ -1,5 +1,7 @@
 
 
+import 'package:coffee_hub/Screens/home_screen.dart';
+import 'package:coffee_hub/Screens/main_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-    home: SplashScreen(),
+    home: HomeScreen(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch().copyWith(secondary: bgtwoColor)
       ),

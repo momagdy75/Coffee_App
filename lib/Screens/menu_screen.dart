@@ -40,8 +40,7 @@ bool isOpen = false;
 
                 children: [
                   Appbar(),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 16),
+                  Center(
                     child: RichText(
                         text: TextSpan(children: [
                           TextSpan(
@@ -58,7 +57,6 @@ bool isOpen = false;
                   Expanded(
                     child: ListView.builder(
                       itemCount: coffeeNames.length,
-
                       itemBuilder: (context, index) => MenuItem(coffeeNames: coffeeNames, isOpen: isOpen,index: index),
                     ),
                   ),

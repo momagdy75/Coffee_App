@@ -20,7 +20,6 @@ class MenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-
         Navigator.push(context, MaterialPageRoute(builder: (context){
           return ItemScreen(index);
         }));
@@ -35,7 +34,8 @@ class MenuItem extends StatelessWidget {
               isOpen ? SvgPicture.asset("assets/images/${coffeeNames[index]}light.svg") :SvgPicture.asset("assets/images/${coffeeNames[index]}.svg")  ,
               Text(coffeeNames[index],style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: isOpen? Colors.white : Colors.black),),
               IconButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context){
+                Navigator.push(context,MaterialPageRoute(builder: (context)
+                {
                   return ItemScreen(index);
                 }));
               }, icon: Icon(Icons.arrow_forward_ios,size: 16,color: btnColor,))

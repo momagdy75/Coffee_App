@@ -9,11 +9,9 @@ class BottomNavBar extends StatefulWidget {
     required this.visable,
     required this.index
   }) : super(key: key);
-
   final bool isOpen;
   final bool visable;
   final int index;
-
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
@@ -59,8 +57,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 return HomeScreen();
               }), (route) => false);
             }, icon:widget.index==3? SvgPicture.asset("assets/images/profile.svg"):SvgPicture.asset("assets/images/profilelight.svg")),
-
-
           ],
         ),
       ),

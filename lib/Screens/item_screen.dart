@@ -7,7 +7,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:toast/toast.dart';
 class ItemScreen extends StatefulWidget {
   int index = 1;
-
   ItemScreen(this.index);
 
   @override
@@ -26,10 +25,10 @@ class _ItemScreenState extends State<ItemScreen> {
 
   List<int> coffeePrices = [
     19,
-    16,
-    14,
     10,
     13,
+    16,
+    14,
   ];
   int check = -1;
   int check2= -1;
@@ -39,8 +38,8 @@ class _ItemScreenState extends State<ItemScreen> {
   @override
   Widget build(BuildContext context) {
     ToastContext().init(context);
-    return Scaffold(
-      body: Container(
+    return Scaffold(resizeToAvoidBottomInset: false,
+        body: Container(
         child: Column(
           children: [
             Stack(
